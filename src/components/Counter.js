@@ -20,11 +20,11 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => {this.props.increment}}>
-                    +
+                <button onClick={() => {this.props.increment();}}>
+                    beep
                 </button>
-                <button onClick={() => {this.props.decrement }}>
-                    -
+                <button onClick={() => {this.props.decrement();}}>
+                    bop
                 </button>
                  {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
@@ -47,7 +47,7 @@ class Counter extends Component {
 // parts it needs from the state object.
 const mapStateToProps = (state) => {
     return {
-        count: state.count
+        count: state
     };
 };
 
