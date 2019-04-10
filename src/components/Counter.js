@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
-
+import './counterStyle.css';
+const upButton={
+    border:"2px solid maroon"
+}
 class Counter extends Component {
     incrementIfOdd = () => {
         // Stretch Problem: Implement an increment function that
@@ -18,12 +21,12 @@ class Counter extends Component {
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
         return (
-            <p>
-                Clicked: {this.props.count} times
-                <button onClick={() => {this.props.increment();}}>
+            <p className="whole">
+                <div className="clicked">Clicked: {this.props.count} times</div>
+                <button  className="up" onClick={() => {this.props.increment();}}>
                     beep
                 </button>
-                <button onClick={() => {this.props.decrement();}}>
+                <button className="down"onClick={() => {this.props.decrement();}}>
                     bop
                 </button>
                  {/* Uncomment these button tags if you got
