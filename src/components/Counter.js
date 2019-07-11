@@ -14,6 +14,14 @@ class Counter extends Component {
     incrementAsync = () => {
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
+        var intervalId = setInterval(function(){
+            //this didnt work
+            if(increment === 10){
+               clearInterval(intervalId);
+            }
+            console.log(increment);
+            this.increment++;
+         }, 5000);
     };
 
     render() {
@@ -33,10 +41,10 @@ class Counter extends Component {
                 around to implementing the extra credit functions */}
                 {/* <button onClick={this.incrementIfOdd}>
                     Increment if odd
-                </button>
+                </button>*/}
                 <button onClick={this.incrementAsync}>
                     Increment async
-                </button>  */}
+                </button>  
             </p>
         );
     }

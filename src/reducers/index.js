@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from '../actions';
+import { INCREMENT, DECREMENT, ASYNCINCREMENT } from '../actions';
 
 
 // Our reducer that handles our two action cases:
@@ -14,5 +14,6 @@ export default (count = 0, action) => {
     // Fill in the body of this case
     default:
       return count;
+    case ASYNCINCREMENT:return ++count,5000;
   }
 };
