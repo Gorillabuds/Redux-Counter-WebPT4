@@ -1,5 +1,6 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
+export const ASYNCINCREMENT='ASYNCINCREMENT';
 
 // Our action creators will return
 // an action packet that our reducer will
@@ -8,7 +9,11 @@ export const DECREMENT = 'DECREMENT';
 // responsible for handling any of the actual
 // logic of updating the central Redux store. That
 // is left to the reducer(s).
-
+export const asyncIncrement =count=>{
+  return{
+    type:INCREMENT
+  }
+}
 export const increment = count => {
   // Fill in this function
   return{
